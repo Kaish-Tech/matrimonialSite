@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #444;
+}
+#root{
+    height: 100%;
+    width: 100%;
+}
+.registrationFormContainer{
+    height: 80%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registrationFormContainer>form{
+    width: 50%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 30px 1px #efefef;
+    border-radius: 20px;
+    gap:50px;
+    height: 100%;
+    overflow-y: scroll;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+padding: 20px 10px;
+}
+::-webkit-scrollbar{
+display: none;
+}
+.registrationFormContainer>form>div{
+    /* background-color: red; */
+    width: 100%;
+
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registrationFormContainer>form>div>h1{
+    color: limegreen;
+}
+.registrationFormContainer>form>div>input,select,textarea{
+    width: 100%;
+    height: 35px;
+    padding: 2px;
+    border: none;
+    background-color: #444;
+    outline: none;
+    border-radius: 5px;
+    color: #efefef;
+}
+.registrationFormContainer>form>div>input::placeholder,.registrationFormContainer>form>div>select{
+color: #efef;
+font-weight: 700;
+}
+.registrationFormContainer>form>div:nth-child(6){
+    /* background-color: red; */
+    gap: 10px;
+    color: #efe;
+}
+.registrationFormContainer>form>div:nth-child(6)>div{
+    /* background-color: red; */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #efe;
+    font-weight: 700;
+
+}
+.registrationFormContainer>form>div>textarea{
+    height: 105px;
+}
+.registrationFormContainer>form>div:nth-child(16),.registrationFormContainer>form>div:nth-child(17){
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    color: #efe;
+    font-weight: 700;
+    
+}
+.registrationFormContainer>form>div:nth-child(16)>div:first-child,.registrationFormContainer>form>div:nth-child(17)>div:first-child{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 5px;
+}
+.registrationFormContainer>form>div:nth-child(16)>div:last-child,.registrationFormContainer>form>div:nth-child(17)>div:last-child{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px 5px;
+}
+.registrationFormContainer>form>div>button,.loginFormContainer>form>div>button{
+    width: 100%;
+    padding: 2px;
+    background-color: yellow;
+    border-radius: 5px;
+    height: 35px;
+    border: none;
+}
+
+.loginFormContainer{
+    height: 80%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginFormContainer>form{
+    width: 50%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 30px 1px #efefef;
+    border-radius: 20px;
+    gap:50px;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 20px 10px;
+}
+
+.loginFormContainer>form>div{
+    /* background-color: red; */
+    width: 100%;
+
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginFormContainer>form>div>h1{
+    color: limegreen;
+}
+.loginFormContainer>form>div>input,select,textarea{
+    width: 100%;
+    height: 35px;
+    padding: 2px;
+    border: none;
+    background-color: #444;
+    outline: none;
+    border-radius: 5px;
+    color: #efefef;
+}
+
+.cardContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:50px;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+    align-content: start;
+    /* background-color: hotpink; */
+}
+.card{
+    width: 400px;
+    height: 1200px;
+    padding:10px;
+    box-shadow: 0px 0px 30px 1px #efefef;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.card>img{
+    height: 50%;
+    width: 100%;
+    border-radius: 10px 0px;
+    /* padding:10px; */
+}
+.card>div{
+    background-color: #efefef;
+    flex-grow: 1;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap:10px;
+    padding:10px;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+.card>div>div{
+    flex-grow: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.2em;
+    font-family: "Doto",sans-serif;
+}
+.card>div>div>span{
+    color:red;
+}
+.card>div>div:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+}
+.card>div:nth-child(8){
+    font-size: 0.8em;
+}
+.card>div:nth-child(9){
+    display: flex;
+    gap:5px;
+    font-size: 0.8em;
+}
+.card>div:nth-child(9)>div{
+    display: flex;
+    gap: 10px;
+}
+.card>div:nth-child(9)>div>div{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card>div:nth-child(9)>div>div>span{
+    text-decoration: underline solid black;
+    columns: red;
+}
+.card>div:nth-child(10),.card>div:nth-child(11){
+    height: 100px;
+    align-items: start;
+}
+.card>div:nth-child(10)>div,.card>div:nth-child(11)>div{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.card>div:nth-child(12),.card>div:nth-child(13){
+    font-size: 0.8em;
+}
+.nav{
+    width: 100%;
+    background-color: hotpink;
+    height: 60px;
+    box-shadow: 0px 0px 50px 2px #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav>a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+}
+.nav>div{
+    width: 70%;
+}
+.nav>div>input{
+    width: 100%;
+    padding: 5px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/*.allContainner{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+ .allContainner>div{
+    flex-grow: 1;
+    
+}
+.allContainner>div:nth-child(2){
+    overflow-x: scroll;
+ 
+    display: flex;
+    gap: 10px;
+}
+.allContainner>div:nth-child(2)>div{
+
+    width: 30%;
+    height: 100%;
+    
+}
+.allContainner>div:nth-child(2)>div>img{
+    width: 100%;
+    height: 50%;
+} */
