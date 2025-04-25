@@ -1,3 +1,5 @@
+import navbar from "./navbar.js";
+
 let home=()=>{
     
     (async ()=>{
@@ -62,41 +64,74 @@ let home=()=>{
             `
         }).join("")
         console.log(stringData)
-        root.innerHTML=`<div class ="cardContainer">${stringData}</div>`
+        root.innerHTML=`<div class ="cardContainer">
+        <div class="nav">${navbar()}</div>
+        <div id ="allPeople">
+        ${stringData}</div></div>`
 
-        // let allImg = document.querySelectorAll("img")
-        // allImg.forEach((img)=>{
-        //     img.addEventListener("click",(e)=>{
-        //         let id = e.target.getAttribute("data-id")
-        //       let clickedUser =  data.find((val)=>val._id==id)
-        //       console.log(clickedUser)
-        //       let remainingUser = data.filter((val)=>val._id!=id)
-        //       console.log(remainingUser);
+        let inp= document.querySelector("input")
 
+        inp.addEventListener("input",(e)=>{
+            let filterData = data.filter((val)=>val.name.toLowerCase().includes(e.target.value.toLowerCase()) || val.gender.toLowerCase().includes(e.target.value.toLowerCase()) || val.zodiacSign.toLowerCase().includes(e.target.value.toLowerCase()) ).map((val)=>{
 
-        //       let remainingUserString = remainingUser.map((val)=>{
-        //         return`
-        //         <div class= "card">
-        //                 <img src="${val.image}" data-id=${val._id}>
-        //                 <div>
-        //                     <div>Name:${val.name}</div>
-        //                 </div>
-        //         </div>
-        //         `
-        //       }).join("")
-        //       root.innerHTML=`<div class="allContainner>
-              
-        //         <div>
-        //             <div>
-        //             <img src="${clickedUser.image}">
-        //             </div>
-        //             <div></div>
-        //         </div>
-        //         <div>
-        //         ${remainingUserString}</div>
-        //       </div>`
-        //     })
-        // })
+                return `
+                 <div class="card">
+                        <img src=${val.image} >
+                        <div>
+                            <div><span>Name:</span>  ${val.name}</div>
+                        </div>
+                        <div>
+                            <div><span>Email:</span>  ${val.email}</div>
+                        </div>
+                        <div>
+                            <div><span>Age: </span>${val.age}</div>
+                             <div><span>Gender: </span>${val.gender}</div>
+                        </div>
+                        <div>
+                            <div><span>Zodiac Sign: </span>${val.zodiacSign}</div>
+                        </div>
+                        <div>
+                            <div><span>Religion: </span>${val.religion}</div>
+                    
+                        </div>
+                        <div>
+                             <div><span>Job: </span>${val.job}</div>
+                        </div>
+                        <div>
+                             <div><span>Education Qualification: </span>${val.educationQualification}</div>
+                        
+                        </div>
+                        <div>
+                            <div>
+                                <div><span>Area </span>${val.address.area}</div>
+                                <div><span>State </span>${val.address.state}</div>
+                                <div><span>Pin </span>${val.address.pin}</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div><span>About: </span>${val.about}</div>
+                        </div>
+                        <div>
+                             <div><span>Family: </span>${val.family}</div>
+                        </div>
+    
+                        <div>
+                            <div><span>Hobbies:</span> ${val.hobbies.map((hobbi)=>{
+                                return `<div>${hobbi}</div>`
+                            })}</div>
+                        </div>
+    
+                        
+                        <div>
+                            <div><span>Interests:</span> ${val.interests.map((hobbi)=>{
+                                return `<div>${hobbi}</div>`
+                            })}</div>
+                        </div>
+                    </div>
+                `
+            }).join("")
+            allPeople.innerHTML=`${filterData}`
+        })
     })()
 }
 export default home

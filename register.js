@@ -1,7 +1,12 @@
 import login from "./login.js"
+import navbar, { bindingAnchor } from "./navbar.js"
 
 let register = () => {
+    setTimeout(()=>{
+        bindingAnchor()
+    })
     return `
+    <div class="nav">${navbar()}</div>
     <div class="registrationFormContainer">
             <form action="">
                 <div>

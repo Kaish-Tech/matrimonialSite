@@ -6,29 +6,30 @@
 body{
     height: 100vh;
     width: 100%;
-    background-color: #444;
+    background-color: #efefef;
 }
 #root{
     height: 100%;
     width: 100%;
 }
 .registrationFormContainer{
-    height: 80%;
+    height: 100%;
     width: 100%;
     /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
 }
 .registrationFormContainer>form{
-    width: 50%;
-    background-color: #000;
+    width: 40%;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 0px 30px 1px #efefef;
+    box-shadow: 0px 0px 30px 1px #000;
     border-radius: 20px;
-    gap:50px;
+    gap:20px;
     height: 100%;
     overflow-y: scroll;
     background-repeat: no-repeat;
@@ -43,32 +44,34 @@ display: none;
     /* background-color: red; */
     width: 100%;
 
-    padding: 5px;
+    /* padding: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 .registrationFormContainer>form>div>h1{
-    color: limegreen;
+    color: hotpink;
+    text-align: center;
 }
 .registrationFormContainer>form>div>input,select,textarea{
     width: 100%;
     height: 35px;
-    padding: 2px;
+    padding: 5px;
     border: none;
-    background-color: #444;
+    background-color: #efefef;
     outline: none;
     border-radius: 5px;
     color: #efefef;
 }
-.registrationFormContainer>form>div>input::placeholder,.registrationFormContainer>form>div>select{
-color: #efef;
+.registrationFormContainer>form>div>input::placeholder,.registrationFormContainer>form>div>select::placeholder,.registrationFormContainer>form>div>textarea::placeholder{
+color: #000;
 font-weight: 700;
 }
 .registrationFormContainer>form>div:nth-child(6){
     /* background-color: red; */
-    gap: 10px;
-    color: #efe;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 700;
 }
 .registrationFormContainer>form>div:nth-child(6)>div{
     /* background-color: red; */
@@ -77,18 +80,25 @@ font-weight: 700;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: #efe;
-    font-weight: 700;
+    /* color: #efe; */
+    /* font-weight: 700; */
 
 }
 .registrationFormContainer>form>div>textarea{
     height: 105px;
+    background-color: #efefef;
+    border-radius:5px;
+    padding:5px;
+    border: none;
+    outline: none;
+    color: #000;
+    font-weight: 700;
 }
 .registrationFormContainer>form>div:nth-child(16),.registrationFormContainer>form>div:nth-child(17){
     /* background-color: red; */
     display: flex;
     flex-direction: column;
-    color: #efe;
+    /* color: #efe; */
     font-weight: 700;
     
 }
@@ -116,23 +126,24 @@ font-weight: 700;
 }
 
 .loginFormContainer{
-    height: 80%;
+    height: 100%;
     width: 100%;
     /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
 }
 .loginFormContainer>form{
-    width: 50%;
-    background-color: #000;
+    width: 40%;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 0px 30px 1px #efefef;
+    box-shadow: 0px 0px 30px 1px #000;
     border-radius: 20px;
-    gap:50px;
-    height: 100%;
+    gap:40px;
+    height: 60%;
     overflow-y: scroll;
     padding: 20px 10px;
 }
@@ -147,17 +158,17 @@ font-weight: 700;
     align-items: center;
 }
 .loginFormContainer>form>div>h1{
-    color: limegreen;
+    color: hotpink;
 }
-.loginFormContainer>form>div>input,select,textarea{
+.loginFormContainer>form>div>input{
     width: 100%;
     height: 35px;
-    padding: 2px;
+    padding: 5px;
     border: none;
-    background-color: #444;
+    background-color: #efefef;
     outline: none;
     border-radius: 5px;
-    color: #efefef;
+    /* color: #efefef; */
 }
 
 .cardContainer{
@@ -171,6 +182,14 @@ font-weight: 700;
     align-items: center;
     align-content: start;
     /* background-color: hotpink; */
+}
+#allPeople{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: start;
 }
 .card{
     width: 400px;
@@ -275,30 +294,3 @@ font-weight: 700;
     outline: none;
 }
 
-/*.allContainner{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-}
- .allContainner>div{
-    flex-grow: 1;
-    
-}
-.allContainner>div:nth-child(2){
-    overflow-x: scroll;
- 
-    display: flex;
-    gap: 10px;
-}
-.allContainner>div:nth-child(2)>div{
-
-    width: 30%;
-    height: 100%;
-    
-}
-.allContainner>div:nth-child(2)>div>img{
-    width: 100%;
-    height: 50%;
-} */

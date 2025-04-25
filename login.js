@@ -1,7 +1,13 @@
 import home from "./home.js"
+import navbar, { bindingAnchor } from "./navbar.js"
 
 let login=()=>{
-    return `<div class="loginFormContainer">
+    setTimeout(()=>{
+        bindingAnchor();
+    })
+    return `
+    <div class="nav">${navbar()}</div>
+    <div class="loginFormContainer">
 
             <form action="">
                 <div>
@@ -65,20 +71,7 @@ try {
             else{
                 alert(`${data.message}`)
             
-            }
-        // if(data.statusCode!=404){
-        //     alert(`${data.message}`)
-        //     window.history.pushState(null,"","/home")
-        //     root.innerHTML=home()
-        // }
-        // else{
-        //     alert(`${data.message}`)
-        //     window.history.pushState(null,"","/login")
-        //     root.innerHTML=login()
-        //     loginBinding();
-        // }
-        
-       
+            }       
     })()
 } catch (error) {
     console.log(error)
